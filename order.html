@@ -1,0 +1,308 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Order Online</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="order.css">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <meta charset="UTF-8">
+</head>
+
+<body>
+    <header>
+        <nav>
+        </nav>
+    </header>
+
+    <main class="container mt-5">
+        <h1>Order Online</h1>
+
+        <section id="menu-categories">
+        </section>
+
+        <section id="menu-preview">
+            <h2>Menu</h2>
+            <div id="menu-items-order" class="row">
+            </div>
+        </section>
+
+        <section id="order-details">
+            <h2>Your Order</h2>
+            <div id="cart" class="mb-3">
+                <p>Your cart is empty.</p>
+            </div>
+            <p>Total: <span id="total">₹0.00</span></p>
+
+            <form id="order-form" method="post" action="https://formspree.io/f/mjkgdpnv">
+                <div class="form-group">
+                    <label for="name">Name:</label>
+                    <input type="text" class="form-control" id="name" required>
+                </div>
+                <div class="form-group">
+                    <label for="address">Address:</label>
+                    <textarea class="form-control" id="address" required></textarea>
+                </div>
+                <div class="form-group">
+                    <label for="phone">Phone:</label>
+                    <input type="tel" class="form-control" id="phone" required>
+                </div>
+                <div class="form-group">
+                    <label for="delivery-pickup">Delivery/Pickup:</label>
+                    <select class="form-control" id="delivery-pickup">
+                        <option value="delivery">Delivery</option>
+                        <option value="pickup">Pickup</option>
+                    </select>
+                </div>
+
+                <button type="submit" class="btn btn-primary">Place Order</button>
+            </form>
+        </section>
+    </main>
+
+    <footer>
+    </footer>
+    <div class="back-button-container">
+        <button id="back-button">Back to Menu</button>
+    </div>
+    <script>
+        const backButton = document.getElementById('back-button');
+
+        backButton.addEventListener('click', () => {
+            window.history.back();
+        });
+
+        const menuData = {
+            "Non-Veg Starters": [
+                { name: "Chicken Tikka", description: "Tender chicken marinated in yogurt and spices.", price: 120, image: "https://i.ibb.co/67R2y0Np/1.jpg" },
+                { name: "Mutton Seekh Kebab", description: "Minced mutton with herbs and spices.", price: 140, image: "https://i.ibb.co/jZkCb17g/2.jpg" },
+                { name: "Tandoori Chicken", description: "Chicken marinated in tandoori spices and cooked in a tandoor.", price: 150, image: "https://i.ibb.co/1YChmTd7/3.jpg" },
+                { name: "Fish Fry", description: "Fish fillets marinated in spices and shallow fried.", price: 130, image: "https://i.ibb.co/hJLvqd0S/4.jpg" },
+                { name: "Shrimp Cocktail", description: "Cooked shrimp served with cocktail sauce.", price: 160, image: "https://i.ibb.co/bDLnfqG/5.jpg" },
+                { name: "Chicken Wings", description: "Crispy chicken wings tossed in your choice of sauce.", price: 110, image: "https://i.ibb.co/RGGc0zQd/6.jpg" },
+                { name: "Egg Rolls", description: "Crispy rolls filled with meat and vegetables.", price: 90, image: "https://i.ibb.co/wZYp1kbF/7.jpg" },
+                { name: "Bacon-Wrapped Dates", description: "Dates stuffed with goat cheese and wrapped in bacon.", price: 100, image: "https://i.ibb.co/MxPmGMPK/8.jpg" },
+                { name: "Crab Rangoon", description: "Crispy wontons filled with crab meat and cream cheese.", price: 130, image: "https://i.ibb.co/Gv9QV4MX/9.jpg" },
+                { name: "Lamb Chops", description: "Tender and flavorful lamb chops.", price: 170, image: "https://i.ibb.co/RG1pGJX9/10.jpg" }
+            ],
+            "Veg Starters": [
+                { name: "Paneer Tikka", description: "Marinated paneer cubes grilled to perfection.", price: 120, image: "https://i.ibb.co/sdtxbYdf/1.jpg" },
+                { name: "Vegetable Samosa", description: "Crispy pastry filled with spiced potatoes and peas.", price: 80, image: "https://i.ibb.co/Ly0PbSs/2.jpg" },
+                { name: "Spring Rolls", description: "Crispy rolls filled with fresh vegetables.", price: 100, image: "https://i.ibb.co/LXpggWYH/3.jpg" },
+                { name: "Mushroom Tikka", description: "Tender mushrooms marinated and grilled.", price: 140, image: "https://i.ibb.co/S40PMg1n/4.jpg" },
+                { name: "Onion Bhaji", description: "Crispy fried onion fritters.", price: 70, image: "https://i.ibb.co/d81gJ9Z/5.jpg" },
+                { name: "Chilli Paneer", description: "Spicy and flavorful paneer dish.", price: 130, image: "https://i.ibb.co/DDdqkpY2/6.jpg" },
+                { name: "Hara Bhara Kebab", description: "Spinach and potato patties.", price: 90, image: "https://i.ibb.co/fVW6RfqN/7.jpg" },
+                { name: "Veg Manchurian", description: "Indo-Chinese dish with vegetable balls.", price: 110, image: "https://i.ibb.co/nN62j4Q7/8.jpg" },
+                { name: "Tandoori Aloo", description: "Potatoes marinated in tandoori spices.", price: 100, image: "https://i.ibb.co/xqrvH4W7/9.jpg" },
+                { name: "Crispy Corn", description: "Crispy fried corn kernels.", price: 80, image: "https://i.ibb.co/sv2GYLQC/10.jpg" }
+            ],
+            "Soups": [
+                { name: "Tomato Soup", description: "A classic creamy soup made with fresh tomatoes, herbs, and a touch of cream.", price: 50, image: "https://i.ibb.co/bgF9cTtF/1.jpg" },
+                { name: "Chicken Noodle Soup", description: "Comforting chicken broth with egg noodles and vegetables.", price: 70, image: "https://i.ibb.co/bj7Cg9sG/2.jpg" },
+                { name: "Vegetable Clear Soup", description: "Light and refreshing vegetable broth.", price: 60, image: "https://i.ibb.co/mr1YKHGx/3.jpg" },
+                { name: "Hot and Sour Soup", description: "Spicy and tangy soup with vegetables, tofu, and mushrooms.", price: 80, image: "https://i.ibb.co/Q7GRGHxt/4.jpg" },
+                { name: "Manchow Soup", description: "Spicy Indo-Chinese soup with crispy noodles.", price: 90, image: "https://i.ibb.co/zWKdgFSr/5.jpg"},
+                { name: "Sweet Corn Soup", description: "Creamy and sweet soup made with sweet corn.", price: 75, image: "https://i.ibb.co/8nNXQW8R/6.jpg" },
+                { name: "Mushroom Soup", description: "Rich and creamy soup with sautéed mushrooms.", price: 85, image: "https://i.ibb.co/ynxw4MHC/7.jpg" },
+                { name: "Spinach Soup", description: "Healthy and creamy spinach soup.", price: 65, image: "https://i.ibb.co/9mCPPN3M/8.jpg" },
+                { name: "Lentil Soup", description: "Hearty and flavorful lentil soup with vegetables and spices.", price: 55, image: "https://i.ibb.co/8DDzk0Z9/9.jpg" },
+                { name: "Broccoli Cheddar Soup", description: "Creamy and cheesy soup with tender broccoli florets.", price: 70, image: "https://i.ibb.co/vCTGDggr/10.jpg" }
+            ],
+            "Fish & Seafood": [
+                { name: "Grilled Salmon", description: "Flaky grilled salmon with lemon-dill sauce.", price: 180, image: "https://i.ibb.co/LzJF5W7P/1.jpg"},
+                { name: "Shrimp Scampi", description: "Shrimp sautéed in garlic butter and white wine.", price: 160, image: "https://i.ibb.co/QjM3kknY/2.jpg"  },
+                { name: "Fish and Chips", description: "Crispy battered fish served with french fries.", price: 140, image: "https://i.ibb.co/8gBkPQYb/3.jpg" },
+                { name: "Crab Cakes", description: "Crab cakes with remoulade sauce.", price: 200, image: "https://i.ibb.co/ZR7XN9KH/4.jpg"  },
+                { name: "Lobster Thermidor", description: "Lobster in a creamy wine sauce, baked in the shell.", price: 250, image: "https://i.ibb.co/VWYTwRYB/5.jpg" },
+                { name: "Tuna Steak", description: "Seared tuna steak with sesame crust.", price: 190, image: "https://i.ibb.co/5gYjfQXq/6.jpg" },
+                { name: "Calamari Fritti", description: "Crispy fried calamari rings.", price: 150, image: "https://i.ibb.co/tTBZv49s/7.jpg" },
+                { name: "Seafood Paella", description: "Spanish rice dish with a variety of seafood.", price: 220, image: "https://i.ibb.co/SwnQNnqS/8.jpg"  },
+                { name: "Mahi-Mahi", description: "Grilled mahi-mahi with mango salsa.", price: 170, image: "https://i.ibb.co/9HjqQQLG/9.jpg" },
+                { name: "Clam Chowder", description: "Creamy clam chowder with potatoes and bacon.", price: 160, image: "https://i.ibb.co/MxDWVzy4/10.jpg"}
+            ],
+            "Main Course": [
+                { name: "Butter Chicken", description: "Creamy tomato-based sauce with tender chicken.", price: 220, image: "https://i.ibb.co/WWLgsQ0T/1.jpg" },
+                { name: "Paneer Tikka Masala", description: "Paneer cubes in a creamy tomato-based sauce.", price: 180, image: "https://i.ibb.co/7dGSFxQg/2.jpg" },
+                { name: "Vegetable Curry", description: "Flavorful stew with a variety of vegetables.", price: 160, image: "https://i.ibb.co/Pvt4WJbb/3.jpg"  },
+                { name: "Chicken Tikka Masala", description: "Tender chicken in a creamy tomato sauce.", price: 200, image: "https://i.ibb.co/FkR8YLS7/4.jpg"  },
+                { name: "Mutton Biryani", description: "Basmati rice cooked with mutton and spices.", price: 250, image: "https://i.ibb.co/ccdPfsTT/5.jpg" },
+                { name: "Chicken Biryani", description: "Fragrant basmati rice layered with marinated chicken, spices, and herbs.", price: 230, image: "https://i.ibb.co/zTdfP8nD/6.jpg" },
+                { name: "Vegetable Biryani", description: "Aromatic basmati rice cooked with a medley of fresh vegetables and spices.", price: 200, image: "https://i.ibb.co/b512zwGV/7.jpg" },
+                { name: "Fish Biryani", description: "Fluffy basmati rice cooked with marinated fish, aromatic spices, and herbs.", price: 190, image: "https://i.ibb.co/gLNpQyQ8/8.jpg" },
+                { name: "Prawn Biryani", description: "Delicious prawns cooked with fragrant basmati rice, spices, and herbs.", price: 260, image: "https://i.ibb.co/LzhbZx1Z/9.jpg" },
+                { name: "Mutton Hyderabadi Biryani", description: "A rich and flavorful biryani from Hyderabad, with mutton, rice, and spices.", price: 270, image: "https://i.ibb.co/Myxp7FvZ/10.jpg" }
+            ],
+            "Noodles": [
+                { name: "Vegetable Chow Mein", description: "Stir-fried noodles with a colorful mix of vegetables.", price: 120, image: "images/noodle1.jpg" },
+                { name: "Chicken Lo Mein", description: "Egg noodles with tender chicken and vegetables.", price: 140, image: "images/noodle2.jpg" },
+                { name: "Spicy Szechuan Noodles", description: "Fiery noodles with pork or chicken and Szechuan peppercorns.", price: 150, image: "images/noodle3.jpg" },
+                { name: "Pad Thai", description: "Thai rice noodles with shrimp or tofu and peanuts.", price: 160, image: "images/noodle4.jpg" },
+                { name: "Singapore Noodles", description: "Rice vermicelli with shrimp, chicken, and curry powder.", price: 170, image: "images/noodle5.jpg" },
+                { name: "Beef and Broccoli Noodles", description: "Noodles with beef and broccoli in a savory sauce.", price: 180, image: "images/noodle6.jpg" },
+                { name: "Udon Noodle Soup", description: "Udon noodles with vegetables and protein in a warm broth.", price: 150, image: "images/noodle7.jpg" },
+                { name: "Ramen", description: "Japanese noodle soup with rich broth and various toppings.", price: 160, image: "images/noodle8.jpg" },
+                { name: "Pancit", description: "Filipino noodles with meats, vegetables, and a flavorful sauce.", price: 170, image: "images/noodle9.jpg" },
+                { name: "Garlic Parmesan Noodles", description: "Egg noodles tossed in a creamy garlic parmesan sauce.", price: 130, image: "images/noodle10.jpg" }
+            ],
+            "Salads": [
+                { name: "Classic Caesar Salad", description: "Romaine lettuce, Caesar dressing, croutons, Parmesan cheese.", price: 80, image: "images/salad1.jpg" },
+                { name: "Greek Salad", description: "Tomatoes, cucumbers, red onions, olives, feta, vinaigrette.", price: 90, image: "images/salad2.jpg" },
+                { name: "Caprese Salad", description: "Mozzarella, tomatoes, basil, balsamic glaze.", price: 100, image: "images/salad3.jpg" },
+                { name: "Cobb Salad", description: "Chicken/turkey, bacon, eggs, avocado, tomatoes, blue cheese.", price: 120, image: "images/salad4.jpg" },
+                { name: "Waldorf Salad", description: "Apples, celery, walnuts, grapes, creamy dressing.", price: 85, image: "images/salad5.jpg" },
+                { name: "Spinach and Strawberry Salad", description: "Spinach, strawberries, goat cheese, pecans, balsamic vinaigrette.", price: 95, image: "images/salad6.jpg" },
+                { name: "Asian Chicken Salad", description: "Grilled chicken, cabbage, carrots, edamame, wontons, sesame dressing.", price: 110, image: "images/salad7.jpg" },
+                { name: "Quinoa Salad", description: "Quinoa, roasted vegetables, chickpeas, lemon herb dressing.", price: 105, image: "images/salad8.jpg" },
+                { name: "Watermelon and Feta Salad", description: "Watermelon, feta cheese, mint, lime vinaigrette.", price: 90, image: "images/salad9.jpg" },
+                { name: "Mediterranean Chickpea Salad", description: "Chickpeas, cucumbers, tomatoes, onions, peppers, olives, feta, lemon dressing.", price: 100, image: "images/salad10.jpg" }
+            ],
+            "Desserts": [
+                { name: "Chocolate Lava Cake", description: "Decadent chocolate cake with a molten chocolate center.", price: 90, image: "https://i.ibb.co/qF1BHV9x/1.jpg"  },
+                { name: "Tiramisu", description: "Espresso-soaked ladyfingers, mascarpone cheese, cocoa powder.", price: 100, image: "https://i.ibb.co/22PMfGm/2.jpg" },
+                { name: "Cheesecake", description: "Creamy dessert with a graham cracker crust.", price: 110, image: "https://i.ibb.co/fwWvymw/3.jpg" },
+                { name: "Apple Pie", description: "Flaky crust filled with sweet and spiced apples.", price: 95, image: "https://i.ibb.co/DfFTV7QC/4.jpg" },
+                { name: "Crème brûlée", description: "Creamy custard with a caramelized sugar topping.", price: 105, image: "https://i.ibb.co/p603YSHN/5.jpg" },
+                { name: "Brownies", description: "Fudgy or cakey chocolate squares.", price: 80, image: "https://i.ibb.co/Z69Q0W7V/6.jpg"  },
+                { name: "Ice Cream Sundae", description: "Ice cream with sauces, whipped cream, and sprinkles.", price: 85, image: "https://i.ibb.co/q3c5cC37/7.jpg"  },
+                { name: "Panna Cotta", description: "Sweetened cream thickened with gelatin.", price: 90, image: "https://i.ibb.co/D0wYPCX/8.jpg"  },
+                { name: "Fruit Tart", description: "Pastry crust filled with custard and fresh fruit.", price: 100, image: "https://i.ibb.co/bjXXKzch/9.jpg" },
+                { name: "Mousse", description: "Light and airy dessert made with whipped cream.", price: 95, image: "https://i.ibb.co/b5f2QKGr/10.jpg" }
+            ]
+        };
+
+        const menuCategories = document.getElementById('menu-categories');
+        const menuItemsContainer = document.getElementById('menu-items-order');
+        const cart = document.getElementById('cart');
+        const totalElement = document.getElementById('total');
+        const orderForm = document.getElementById('order-form');
+
+        let currentCart = [];
+
+        for (const category in menuData) {
+            const categoryButton = document.createElement('button');
+            categoryButton.textContent = category;
+            categoryButton.classList.add('btn', 'btn-primary', 'm-2');
+            categoryButton.addEventListener('click', () => {
+                displayMenuItems(category);
+            });
+            menuCategories.appendChild(categoryButton);
+        }
+
+        function displayMenuItems(category) {
+            menuItemsContainer.innerHTML = '';
+
+            const items = menuData[category];
+            items.forEach(item => {
+                const menuItemDiv = document.createElement('div');
+                menuItemDiv.classList.add('col-12', 'col-md-6', 'col-lg-4', 'mb-3');
+                menuItemDiv.innerHTML = `
+                    <div class="card">
+                        <img src="${item.image}" class="card-img-top" alt="${item.name}">
+                        <div class="card-body">
+                            <h5 class="card-title">${item.name}</h5>
+                            <p class="card-text">${item.description}</p>
+                            <p class="card-text">₹${item.price.toFixed(2)}</p>
+                            <button class="btn btn-success add-to-cart" data-name="${item.name}" data-price="${item.price}">Add to Cart</button>
+                        </div>
+                    </div>
+                `;
+                menuItemsContainer.appendChild(menuItemDiv);
+            });
+        }
+
+        menuItemsContainer.addEventListener('click', (event) => {
+            if (event.target.classList.contains('add-to-cart')) {
+                const itemName = event.target.dataset.name;
+                const itemPrice = parseFloat(event.target.dataset.price);
+
+                const item = {
+                    name: itemName,
+                    price: itemPrice
+                };
+                currentCart.push(item);
+                updateCart();
+            }
+        });
+
+        function updateCart() {
+            cart.innerHTML = '';
+            let totalPrice = 0;
+
+            if (currentCart.length === 0) {
+                cart.innerHTML = "<p>Your cart is empty.</p>";
+            } else {
+                currentCart.forEach((item, index) => {
+                    const cartItem = document.createElement('div');
+                    cartItem.classList.add('cart-item');
+                    cartItem.innerHTML = `
+                        <span>${item.name} - ₹${item.price.toFixed(2)}</span>
+                        <button class="remove-from-cart" data-index="${index}">Remove</button>
+                    `;
+                    cart.appendChild(cartItem);
+                    totalPrice += item.price;
+                });
+            }
+
+            totalElement.textContent = `₹${totalPrice.toFixed(2)}`;
+        }
+
+        cart.addEventListener('click', (event) => {
+            if (event.target.classList.contains('remove-from-cart')) {
+                const indexToRemove = parseInt(event.target.dataset.index);
+                currentCart.splice(indexToRemove, 1);
+                updateCart();
+            }
+        });
+
+        orderForm.addEventListener('submit', async (event) => {
+            event.preventDefault();
+
+            const orderData = {
+                items: currentCart,
+                name: document.getElementById('name').value,
+                address: document.getElementById('address').value,
+                phone: document.getElementById('phone').value,
+                delivery: document.getElementById('delivery-pickup').value,
+                total: parseFloat(document.getElementById('total').textContent.replace('₹', '')),
+            };
+
+            try {
+                const response = await fetch('create_order.php', {
+                    method: 'POST',
+                    headers: {
+                        'Content-Type': 'application/json'
+                    },
+                    body: JSON.stringify(orderData)
+                });
+
+                const data = await response.json();
+                if (data.error) {
+                    throw new Error(data.error);
+                }
+
+                console.log("Order submitted:", data);
+                alert("Order placed successfully!");
+                currentCart = [];
+                updateCart();
+                orderForm.reset();
+
+            } catch (error) {
+                console.error('Error submitting order:', error);
+                alert("There was an error submitting your order. Please try again.");
+            }
+        });
+
+        displayMenuItems("Non-Veg Starters");
+        displayMenuItems("Veg Starters");
+        displayMenuItems("Soups");
+        displayMenuItems("Fish & Seafood");
+        displayMenuItems("Main Course");
+        displayMenuItems("Noodles");
+        displayMenuItems("Salads");
+        displayMenuItems("Desserts");
+
+    </script>
+</body>
+
+</html>

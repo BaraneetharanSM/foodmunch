@@ -1,0 +1,352 @@
+/* style.css */
+
+/* Global Styles */
+body {
+    font-family: sans-serif;
+    background-color: #f8f9fa;
+}
+
+/* Navigation */
+nav.navbar {
+    background-color: rgba(255, 255, 255, 0.8);
+    padding: 10px;
+}
+
+.food-munch-logo {
+    width: 80px;
+}
+
+.navbar-nav .nav-item .nav-link {
+    color: #323f4b;
+    font-family: "Roboto";
+}
+
+/* Banner Section */
+.banner-section-bg-container {
+    background-image: url("https://d1tgh8fmlzexmh.cloudfront.net/ccbp-responsive-website/foodmunch-banner-bg.png");
+    height: 100vh;
+    background-size: cover;
+}
+
+.banner-heading {
+    color: white;
+    font-family: "Roboto";
+    font-size: 45px;
+    font-weight: 300;
+}
+
+.banner-caption {
+    color: #f5f7fa;
+    font-family: "Roboto";
+    font-size: 24px;
+    font-weight: 300;
+}
+
+.custom-button, #watchVideoButton { /* Combined selector */
+    color: white;
+    background-image: linear-gradient(#d0b200, #a58d00);
+    width: 130px;
+    height: 45px;
+    border-width: 0;
+    border-radius: 8px;
+    margin-right: 10px;
+}
+
+.custom-outline-button {
+    color: #d0b200;
+    background-color: transparent;
+    width: 130px;
+    height: 45px;
+    border-style: solid;
+    border-width: 1px;
+    border-color: #d0b200;
+    border-radius: 8px;
+}
+
+/* Common Section Styles */
+.menu-section-heading, .video-page-heading, .wcu-section-heading, .healthy-food-section-heading, .delivery-and-payment-section-heading, .thanking-customers-section-heading, .follow-us-section-heading {
+    color: #183b56;
+    font-family: "Roboto";
+    font-size: 2rem; /* Use rem units */
+    font-weight: 700;
+    text-align: center;
+}
+
+.wcu-section-description, .healthy-food-section-description, .delivery-and-payment-section-description, .thanking-customers-section-description {
+    color: #5a7184;
+    font-family: "Roboto";
+    font-size: 1rem;
+}
+
+/* WCU Section */
+.wcu-section {
+    background-color: #f9fbfe;
+}
+
+.wcu-card {
+    text-align: center;
+    background-color: white;
+    border: 1px solid #e5eaf4;
+    border-radius: 16px;
+}
+
+.wcu-card-image {
+    width: 87px;
+    height: 90px;
+}
+
+.wcu-card-title {
+    color: #323f4b;
+    font-family: "Roboto";
+    font-size: 1.375rem; /* Use rem units */
+    font-weight: 500;
+}
+
+/* ... (rest of your WCU section styles) ... */
+
+/* Offers Section */
+.offers {
+    color: #323f4b;
+    font-style: italic;
+    font-weight: 600;
+}
+
+/* Explore Menu Section */
+.explore-menu-section {
+    background-color: white;
+}
+
+.menu-item-image {
+    border-radius: 16px;
+    object-fit: cover;
+    height: 200px;
+    width: 100%;
+}
+
+.menu-card-title {
+    color: #323f4b;
+    font-family: "Roboto";
+    font-size: 1.125rem; /* Use rem units */
+    font-weight: 500;
+    margin-top: 24px;
+}
+
+.menu-item-link {
+    color: #d0b200;
+    font-family: "Roboto";
+    font-size: 0.875rem; /* Use rem units */
+    font-weight: 500;
+    text-decoration: none;
+    display: inline-flex;
+    align-items: center;
+}
+
+.menu-item-link svg {
+    margin-left: 5px;
+}
+
+.menu-item-card {
+    border-radius: 16px;
+    border: none;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    transition: transform 0.2s;
+    background-color: #fff;
+}
+
+.menu-item-card:hover {
+    transform: translateY(-5px);
+}
+
+.menu-card-description {
+    color: #6c757d;
+    font-size: 1rem;
+    margin-bottom: 10px;
+}
+
+.menu-card-price {
+    color: #d0b200;
+    font-size: 1.1rem;
+    font-weight: bold;
+}
+
+
+/* Healthy Food Section */
+.healthy-food-section {
+    background-color: #f9fbfe;
+}
+
+.healthy-food-section-img {
+    width: 270px;
+}
+
+/* Delivery and Payment Section */
+.delivery-and-payment-section {
+    background-color: white;
+}
+
+.delivery-and-payment-section-img {
+    width: 270px;
+}
+
+.payment-card-img {
+    width: 50px;
+    height: 50px;
+    margin-right: 28px;
+}
+
+/* Thanking Customers Section */
+.thanking-customers-section {
+    background-image: radial-gradient(#fff8db, #fae38c);
+}
+
+.thanking-customers-section-img {
+    width: 270px;
+    margin-bottom: 20px;
+}
+
+.thanking-customers-section-modal-title {
+    color: #d0b200;
+    font-weight: 800;
+}
+
+/* Follow Us Section */
+.follow-us-section {
+    background-color: white;
+}
+
+.follow-us-icon-container {
+    background-color: #faf7e8;
+    width: 80px;
+    height: 80px;
+    border-radius: 40px;
+    margin: 15px;
+    padding: 22px 16px 14px 22px; /* Combined padding */
+}
+
+.icon {
+    color: #d0b200;
+    font-size: 2.1875rem; /* Use rem units */
+}
+
+/* Footer Section */
+.footer-section {
+    background-color: #0d2436;
+}
+
+.footer-section-mail-id {
+    color: #959ead;
+    font-family: "Roboto";
+    font-weight: bold;
+    font-size: 1rem;
+    margin-top: 20px;
+}
+
+.footer-section-address {
+    color: #959ead;
+    font-family: "Roboto";
+    font-size: 0.875rem;
+}
+
+/* Page-Specific Backgrounds */
+.dish-page-background, .video-page {
+    min-height: 100vh;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+}
+
+
+.video-page {
+    background-image: url("https://
+/* ... (all the CSS from the previous response) ... */
+
+/* Video Page Specific Styles */
+.video-page-container {
+    background-color: transparent !important; /* Make container transparent */
+    flex: 1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    /* Remove or adjust the background color as needed */
+    /* background-color: rgba(255, 255, 255, 0.8); */ /* Example semi-transparent white */
+}
+
+.video-player {
+    max-width: 60%;
+    max-height: 60%;
+    border: none;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.video-page-back-button {
+    display: block;
+    margin: 20px auto;
+    padding: 10px 20px;
+    color: white;
+    background-image: linear-gradient(#d0b200, #a58d00);
+    text-decoration: none;
+    border-radius: 5px;
+    text-align: center;
+    transition: background-color 0.3s ease;
+}
+
+.video-page-heading {
+    text-align: center;
+    font-weight: bold;
+    background-image: linear-gradient(to right, #d0b200, #a58d00);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.2);
+}
+
+/* Container and Fixed Navbar Adjustment (Crucial) */
+.container {
+    max-width: 1200px;
+    background-color: rgba(255, 255, 255, 0.9);
+    padding: 20px;
+    border-radius: 8px;
+    margin-top: 70px; /* Adjust this value to match your navbar height */
+    flex: 1;
+}
+
+.navbar.fixed-top + .container, /* Container after fixed navbar */
+.navbar.sticky-top + .container { /* Also consider sticky-top */
+    padding-top: 70px; /* Or margin-top, adjust as needed */
+}
+
+
+/* Responsive Styles (Example) */
+@media (max-width: 768px) {
+    .col-md-6 {
+        flex: 0 0 100%;
+        max-width: 100%;
+    }
+
+    .container {
+        margin-top: 80px; /* Adjust for smaller screens if necessary */
+    }
+
+@media (max-width: 768px) {
+    .video-player {
+        max-width: 95%; /* Take up more of the screen on smaller devices */
+        max-height: 95%;
+    }
+}
+
+    /* ... other responsive adjustments ... */
+}
+
+/* ... Any other remaining CSS */
+.video-page {
+    /* ... other styles ... */
+    background-image: url("path/to/your/background.jpg"); /* Correct path here */
+    /* ... other styles ... */
+}
+
+.veg-page-background {
+    min-height: 100vh;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-image: url("https://i.ibb.co/23t0Z4VV/ramadan-celebration-with-delicious-food.jpg");
+}

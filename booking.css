@@ -1,0 +1,99 @@
+/* booking.css */
+
+body {
+    font-family: sans-serif;
+    margin: 0;
+    padding: 20px;
+    background-color: #f4f4f4; /* Light background */
+}
+
+.h1.test-heading {
+    text-align: center;
+    color: #333; /* Dark text color */
+    margin-bottom: 30px;
+}
+
+form {
+    max-width: 500px;
+    margin: 0 auto;
+    padding: 20px;
+    background-color: #fff; /* White form background */
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+label {
+    display: block;
+    margin-bottom: 5px;
+    color: #555; /* Medium dark text */
+}
+
+input[type="text"],
+input[type="email"],
+input[type="tel"],
+input[type="date"],
+input[type="time"],
+select {
+    width: calc(100% - 22px); /* Account for padding and border */
+    padding: 10px;
+    margin-bottom: 15px;
+    border: 1px solid #ddd; /* Light border */
+    border-radius: 4px;
+    box-sizing: border-box;
+}
+
+button[type="submit"] {
+    background-color: #007bff; /* Primary button color */
+    color: #fff;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 16px;
+}
+
+button[type="submit"]:hover {
+    background-color: #0056b3; /* Darker primary hover color */
+}
+
+.back-button-container {
+    text-align: center;
+    margin-top: 20px;
+}
+
+#back-button {
+    background-color: #6c757d; /* Secondary button color */
+    color: #fff;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 16px;
+}
+
+#back-button:hover {
+    background-color: #5a6268; /* Darker secondary hover color */
+}
+body {
+    background-color: #e0e0e0;
+}
+
+h1.test-heading {
+    color: #222;
+}
+
+form {
+    background-color: #fff;
+}
+
+label {
+    color: #222;
+}
+
+button[type="submit"] {
+    background-color: #ff6347;
+}
+
+button[type="submit"]:hover {
+    background-color: #cc4f38;
+}

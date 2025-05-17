@@ -1,0 +1,718 @@
+@import url("https://fonts.googleapis.com/css2?family=Bree+Serif&family=Caveat:wght@400;700&family=Lobster&family=Monoton&family=Open+Sans:ital,wght@0,400;0,700;1,400;1,700&family=Playfair+Display+SC:ital,wght@0,400;0,700;1,700&family=Playfair+Display:ital,wght@0,400;0,700;1,700&family=Roboto:ital,wght@0,400;0,700;1,400;1,700&family=Source+Sans+Pro:ital,wght@0,400;0,700;1,700&family=Work+Sans:ital,wght@0,400;0,700;1,700&display=swap");
+
+nav.navbar { /* Or the correct selector for your navbar */
+    height: 0px; /* Set the desired height */
+}
+.food-munch-logo {
+    width: 80px;
+    height: 70px;
+}
+
+#navItem1 {
+    color: #323f4b;
+    font-family: "Roboto";
+}
+
+#navItem2 {
+    color: #323f4b;
+    font-family: "Roboto";
+}
+
+#navItem3 {
+    color: #323f4b;
+    font-family: "Roboto";
+}
+
+#navItem4 {
+    color: #323f4b;
+    font-family: "Roboto";
+}
+
+.banner-section-bg-container {
+    background-image: url("https://d1tgh8fmlzexmh.cloudfront.net/ccbp-responsive-website/foodmunch-banner-bg.png");
+    height: 100vh;
+    background-size: cover;
+}
+
+.banner-heading {
+    color: white;
+    font-family: "Roboto";
+    font-size: 45px;
+    font-weight: 300;
+}
+
+.banner-caption {
+    color: #f5f7fa;
+    font-family: "Roboto";
+    font-size: 24px;
+    font-weight: 300;
+}
+
+.custom-button {
+    color: white;
+    background-image: linear-gradient(#d0b200, #a58d00);
+    width: 130px;
+    height: 45px;
+    border-width: 0;
+    border-radius: 8px;
+    margin-right: 10px;
+}
+#watchVideoButton {
+    color: white;
+    background-image: linear-gradient(#d0b200, #a58d00);
+    width: 130px;
+    height: 45px;
+    border-width: 0;
+    border-radius: 8px;
+    margin-right: 10px;
+}
+.custom-outline-button {
+    color: #d0b200;
+    background-color: transparent;
+    width: 130px;
+    height: 45px;
+    border-style: solid;
+    border-width: 1px;
+    border-color: #d0b200;
+    border-radius: 8px;
+}
+
+.wcu-section {
+    background-color: #f9fbfe;
+}
+
+.wcu-section-heading {
+    color: #183b56;
+    font-family: "Roboto";
+    font-size: 28px;
+    font-weight: 700;
+}
+
+.wcu-section-description {
+    color: #5a7184;
+    font-family: "Roboto";
+    font-size: 16px;
+}
+
+.wcu-card {
+    text-align: center;
+    background-color: white;
+    border-style: solid;
+    border-width: 1px;
+    border-color: #e5eaf4;
+    border-radius: 16px;
+}
+
+.wcu-card-image {
+    width: 87px;
+    height: 90px;
+}
+
+.wcu-card-title {
+    color: #323f4b;
+    font-family: "Roboto";
+    font-size: 22px;
+    font-weight: 500;
+}
+
+.wcu-card-description {
+    color: #7b8794;
+    font-family: "Roboto";
+    font-size: 16px;
+}
+
+.offers {
+    color: #323f4b;
+    font-style: italic;
+    font-weight: 600;
+}
+
+.explore-menu-section {
+    background-color: white;
+}
+
+.menu-section-heading {
+    color: #183b56;
+    font-family: "Roboto";
+    font-size: 28px;
+    font-weight: 700;
+}
+
+.menu-item-image {
+    border-radius: 16px;
+}
+
+.menu-card-title {
+    color: #323f4b;
+    font-family: "Roboto";
+    font-size: 18px;
+    font-weight: 500;
+    margin-top: 24px;
+}
+
+.menu-item-link {
+    color: #d0b200;
+    font-family: "Roboto";
+    font-size: 14px;
+    font-weight: 500;
+}
+
+.menu-item-card {
+    border-radius: 16px;
+}
+
+.healthy-food-section {
+    background-color: #f9fbfe;
+}
+
+.healthy-food-section-img {
+    width: 270px;
+}
+
+.healthy-food-section-heading {
+    color: #183b56;
+    font-family: "Roboto";
+    font-size: 28px;
+    font-weight: 700;
+}
+
+.healthy-food-section-description {
+    color: #5a7184;
+    font-family: "Roboto";
+    font-size: 16px;
+}
+
+.delivery-and-payment-section {
+    background-color: white;
+}
+
+.delivery-and-payment-section-img {
+    width: 270px;
+}
+
+.delivery-and-payment-section-heading {
+    color: #183b56;
+    font-family: "Roboto";
+    font-size: 28px;
+    font-weight: 700;
+}
+
+.delivery-and-payment-section-description {
+    color: #5a7184;
+    font-family: "Roboto";
+    font-size: 16px;
+}
+
+.payment-card-img {
+    width: 50px;
+    height: 50px;
+    margin-right: 28px;
+}
+
+.thanking-customers-section {
+    background-image: radial-gradient(#fff8db, #fae38c);
+}
+
+.thanking-customers-section-heading {
+    color: #183b56;
+    font-family: "Roboto";
+    font-size: 28px;
+    font-weight: 700;
+}
+
+.thanking-customers-section-description {
+    color: #5a7184;
+    font-family: "Roboto";
+    font-size: 16px;
+}
+
+.thanking-customers-section-img {
+    width: 270px;
+    margin-bottom: 20px;
+}
+
+.thanking-customers-section-modal-title {
+    color: #d0b200;
+    font-weight: 800;
+}
+
+.follow-us-section {
+    background-color: white;
+}
+
+.follow-us-section-heading {
+    text-align: center;
+    color: #183b56;
+    font-family: "Roboto";
+    font-size: 28px;
+    font-weight: 700;
+}
+
+.follow-us-icon-container {
+    background-color: #faf7e8;
+    width: 80px;
+    height: 80px;
+    border-radius: 40px;
+    margin: 15px;
+    padding-top: 22px;
+    padding-bottom: 14px;
+    padding-right: 16px;
+    padding-left: 22px;
+}
+
+.icon {
+    color: #d0b200;
+    font-size: 35px;
+}
+
+.footer-section {
+    background-color: #0d2436;
+}
+
+.footer-section-mail-id {
+    color: #959ead;
+    font-family: "Roboto";
+    font-weight: bold;
+    font-size: 16px;
+    margin-top: 20px;
+}
+
+.footer-section-address {
+    color: #959ead;
+    font-family: "Roboto";
+    font-size: 14px;
+}
+/* style.css */
+
+body {
+    font-family: sans-serif;
+    background-color: #f8f9fa;
+}
+
+
+.menu-section-heading {
+    color: #343a40;
+    font-size: 2.5rem;
+    font-weight: bold;
+    margin-bottom: 20px;
+    text-align: center;
+}
+
+.back-button {
+    display: inline-block;
+    margin-bottom: 20px;
+    color: #007bff; /* Keep the back button blue */
+    text-decoration: none;
+}
+
+.back-button i {
+    margin-right: 5px;
+}
+
+.menu-item-card {
+    border: none;
+    border-radius: 8px;
+    overflow: hidden;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    transition: transform 0.2s;
+}
+
+.menu-item-card:hover {
+    transform: translateY(-5px);
+}
+
+.menu-item-image {
+    object-fit: cover;
+    height: 200px; /* Adjust as needed */
+    width: 100%;
+}
+
+.menu-card-title {
+    color: #343a40;
+    font-size: 1.25rem;
+    font-weight: 600;
+    margin-top: 15px;
+    margin-bottom: 5px;
+}
+
+.menu-card-description {
+    color: #6c757d;
+    font-size: 1rem;
+    margin-bottom: 10px;
+}
+
+.menu-card-price {
+    color: #d0b200; /* Gold/Yellow color! */
+    font-size: 1.1rem;
+    font-weight: bold;
+}
+
+.menu-item-link { /* Style the "View All" links */
+    color: #d0b200; /* Gold/Yellow color! */
+    text-decoration: none;
+    font-weight: bold;
+    display: inline-flex; /* Use flexbox for icon alignment */
+    align-items: center; /* Vertically center icon and text */
+}
+
+.menu-item-link svg { /* Style the arrow icon */
+    margin-left: 5px;
+}
+
+/* Responsive adjustments (example) */
+@media (max-width: 768px) {
+    .menu-item-card {
+        margin-bottom: 20px;
+    }
+}
+/* style.css */
+
+.dish-page-background {
+    background-image: url("images/your-background-image.jpg"); /* Replace with your image path */
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-attachment: fixed; /* Optional */
+    /* Set a min-height to ensure the background covers the entire viewport */
+    min-height: 100vh; /* 100% of viewport height */
+    display: flex; /* Use flexbox for vertical centering */
+    flex-direction: column; /* Stack elements vertically */
+}
+
+.container {
+    max-width: 1200px;
+    background-color: rgba(255, 255, 255, 0.9);
+    padding: 20px;
+    border-radius: 8px;
+    margin-top: 70px; /* Adjust as needed */
+    flex: 1; /* Allow container to expand to fill available space */
+}
+
+/* ... (rest of your CSS styles) ... */
+
+.menu-item-card {
+    /* ... other card styles ... */
+    background-color: #fff;
+}
+
+/* Responsive adjustments (example) */
+@media (max-width: 768px) {
+    .col-md-6 {
+        flex: 0 0 100%;
+        max-width: 100%;
+    }
+
+    .container {
+        margin-top: 80px; /* Adjust for smaller screens if necessary */
+    }
+}
+/* style.css */
+
+/* Styles for the video container */
+.video-container {
+    display: flex; /* Use flexbox for centering */
+    justify-content: center; /* Horizontally center */
+    align-items: center; /* Vertically center */
+    min-height: calc(100vh - 70px); /* Full viewport height minus navbar height (adjust 70px if needed) */
+    background-color: #f0f0f0; /* Example background color */
+}
+
+/* Styles for the YouTube player (iframe) */
+.youtube-player {
+    /* You can add specific styles for the iframe here if needed */
+    border: none; /* Example: Remove default border */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Example: Add a subtle shadow */
+}
+
+/* Styles for the back button */
+.back-button {
+    display: block; /* Take full width */
+    max-width: 300px; /* But don't grow larger than 300px */
+    margin: 20px auto; /* Center horizontally */
+    padding: 10px 20px; /* Add padding (increases width slightly) */
+    /* ... other styles ... */
+}
+
+
+
+/* Responsive Styles (example) */
+@media (max-width: 768px) {
+    .youtube-player {
+        width: 90%; /* Make the video player take up most of the screen width on smaller screens */
+        height: auto;  /* Maintain aspect ratio */
+    }
+}
+/* style.css */
+
+.video-page { /* New class for the main container */
+    margin: 0;
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+    background-image: url("images/kitchen.jpg");
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+}
+
+.video-page-container {
+    background-color: transparent !important;
+    flex: 1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: rgba(255, 255, 255, 0.8);
+}
+
+.video-player {
+
+    max-width:  60%;
+    max-height: 60%;
+    border: none;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+.video-page-back-button {
+    display: block;
+    margin: 20px auto;
+    padding: 10px 20px;
+    background-color: #007bff;
+    color: white;
+    text-decoration: none;
+    border-radius: 5px;
+    text-align: center;
+    transition: background-color 0.3s ease;
+}
+
+.video-page-back-button{
+    color: white;
+    background-image: linear-gradient(#d0b200, #a58d00);
+}
+.video-page-heading {
+    text-align: center;
+    font-weight: bold;
+    background-image: linear-gradient(to right, #d0b200, #a58d00); /* Example gradient */
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.2);
+}
+.veg-page-background {
+    min-height: 100vh;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-image: url("https://i.ibb.co/23t0Z4VV/ramadan-celebration-with-delicious-food.jpg");
+}
+.non-veg-page-background {
+    min-height: 100vh;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-image: url("https://i.ibb.co/pjFc7b4s/top-view-table-full-delicious-food-composition.jpg");
+}
+.soups-page-background {
+    min-height: 100vh;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-image: url("https://i.ibb.co/qFYTHRVc/soup-set-mushroom-lentil-pumpkin-tomato-chicken-side-view.jpg");
+}
+.fishandseafood-page-background {
+    min-height: 100vh;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-image: url("https://i.ibb.co/cK67Qr8D/grilled-fish-tomato-onion-calamary-green-salad-top-view.jpg");
+}
+.maincourse-page-background {
+    min-height: 100vh;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-image: url("https://i.ibb.co/gQxQ1ZG/top-view-eid-al-fitr-celebration-with-delicious-food.jpg");
+}
+.noodles-page-background {
+    min-height: 100vh;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-image: url("https://i.ibb.co/tpZCbBWw/white-border-frame-with-chopsticks-thai-traditional-food-wooden-desk.jpg");
+}
+.salads-page-background {
+    min-height: 100vh;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-image: url("https://i.ibb.co/3mPHLVgM/delicious-salad-with-avocado-tabe.jpg");
+}
+.desserts-page-background {
+    min-height: 100vh;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-image: url("https://i.ibb.co/DH2RBK38/beautiful-delicious-sweet-table-wedding-celebration.jpg");
+}
+/* Quantity Input Styles */
+.item-quantity {
+    width: 60px; /* Adjust width as needed */
+    padding: 5px;
+    margin-bottom: 10px; /* Space below the input */
+    border: 1px solid #ced4da; /* Light gray border */
+    border-radius: 4px;
+    box-sizing: border-box; /* Include padding and border in width */
+    font-size: 1rem; /* Consistent font size */
+}
+
+/* Button Styles (Add to Cart, Decrement, Remove) */
+.add-to-cart,
+.decrement-quantity,
+.remove-item {
+    padding: 8px 16px; /* Adjust padding as needed */
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: background-color 0.2s; /* Smooth hover effect */
+    font-size: 1rem; /* Consistent font size */
+}
+
+.add-to-cart {
+    background-color: #007bff; /* Blue */
+    color: white;
+}
+
+.add-to-cart:hover {
+    background-color: #0056b3; /* Darker blue on hover */
+}
+
+.decrement-quantity {
+    background-color: #ffc107; /* Yellow */
+    color: black;
+    margin-left: 5px; /* Space between buttons */
+}
+
+.decrement-quantity:hover {
+    background-color: #e0a800; /* Darker yellow on hover */
+}
+
+.remove-item {
+    background-color: #dc3545; /* Red */
+    color: white;
+    margin-left: 5px; /* Space between buttons */
+}
+
+.remove-item:hover {
+    background-color: #c12a36; /* Darker red on hover */
+}
+
+/* Cart Summary Quantity Display */
+.quantity-display {
+    margin-right: 10px; /* Space to the right of the quantity */
+    font-weight: bold;
+    font-size: 1rem; /* Consistent font size */
+}
+
+/* Optional: Style the <li> elements in the cart summary for better spacing */
+#cart-items li {
+    margin-bottom: 10px;
+    display: flex; /* Use flexbox for alignment */
+    align-items: center; /* Vertically align items */
+}
+/* ... (Your existing CSS styles) ... */
+
+/* Cart Summary Table Styles */
+#cart-table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-bottom: 20px;
+}
+
+#cart-table th, #cart-table td {
+    padding: 10px;
+    border: 1px solid #ced4da; /* Light gray border */
+    text-align: left;
+}
+
+#cart-table th {
+    background-color: #f2f2f2; /* Light gray background for header */
+    font-weight: bold;
+}
+
+/* Cart Item Quantity Input */
+.cart-item-quantity {
+    width: 50px;
+    padding: 5px;
+    border: 1px solid #ced4da;
+    border-radius: 4px;
+    box-sizing: border-box; /* Include padding and border in width */
+    font-size: 1rem;
+}
+
+/* Cart Summary Buttons */
+#empty-cart-button, #checkout-button {
+    padding: 8px 16px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: background-color 0.2s;
+    font-size: 1rem;
+    margin-right: 10px; /* Space between buttons */
+}
+
+#empty-cart-button {
+    background-color: #dc3545; /* Red */
+    color: white;
+}
+
+#empty-cart-button:hover {
+    background-color: #c12a36; /* Darker red on hover */
+}
+
+#checkout-button {
+    background-color: #007bff; /* Blue */
+    color: white;
+}
+
+#checkout-button:hover {
+    background-color: #0056b3; /* Darker blue on hover */
+}
+.added-to-cart-message {
+    display: inline-block; /* Make it a block element */
+    margin-left: 10px; /* Space from the button */
+    padding: 5px 10px;
+    background-color: #d4edda; /* Light green */
+    color: #155724; /* Dark green */
+    border-radius: 4px;
+    opacity: 0; /* Initially hidden */
+    transition: opacity 0.3s ease-in-out; /* Smooth fade effect */
+}
+
+.added-to-cart-message.show {
+    opacity: 1; /* Show the message */
+}
+@media (max-width: 768px) { /* Tablet and smaller */
+    .col-md-6 { /* Make columns full-width */
+        flex: 0 0 100%;
+        max-width: 100%;
+    }
+
+    /* Adjust other styles as needed */
+    .menu-item-image {
+        height: 150px; /* Smaller image height */
+    }
+
+    #cart-table td, #cart-table th {
+        display: block; /* Stack table cells */
+        width: 100%;
+    }
+
+    #cart-table thead tr {
+        position: absolute; /* Hide table header */
+        top: -9999px;
+        left: -9999px;
+    }
+}
+
+@media (max-width: 576px) { /* Mobile */
+    /* Further adjustments for mobile */
+    .menu-item-image {
+        height: 100px; /* Even smaller image height */
+    }
+}
